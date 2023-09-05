@@ -21,4 +21,5 @@ def changeText(text):
 #사용자에게 입력을 받고 변환 결과 출력
 text = input('입력하세요: ')
 result = changeText(text)
-print(result)
+print("("+text+")/("+result+")") #이중전사 형식?추가
+
