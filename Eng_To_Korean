@@ -1,0 +1,24 @@
+def changeText(text):
+    nstring = "" #nstring을 문자열로 초기화
+    nlist = list(text.upper())  # 입력 문자열을 대문자로 변환 후 리스트로 변환
+    nd = {
+        'A': '에이', 'B': '비', 'C': '씨', 'D': '디', 'E': '이', 'F': '에프',
+        'G': '지', 'H': '에이치', 'I': '아이', 'J': '제이', 'K': '케이', 'L': '엘',
+        'M': '엠', 'N': '엔', 'O': '오', 'P': '피', 'Q': '큐', 'R': '알',
+        'S': '에스', 'T': '티', 'U': '유', 'V': '브이', 'W': '더블유', 'X': '엑스',
+        'Y': '와이', 'Z': '제트'
+    }
+#입력 문자열의 각 문자를 확인하여 nd 딕셔너리에 해당하는
+#대체 문자열을 만들어서 nstring에 추가
+    for i in nlist:
+        if i in nd:
+            nstring += nd[i]
+        else:
+            nstring += i
+
+    return nstring
+
+#사용자에게 입력을 받고 변환 결과 출력
+text = input('입력하세요: ')
+result = changeText(text)
+print(result)
