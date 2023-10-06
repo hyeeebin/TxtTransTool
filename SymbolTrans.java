@@ -13,7 +13,7 @@ public class SymbolTrans {
 		map.put("+", Arrays.asList("더하기","플러스"));
 		map.put("-", Arrays.asList("빼기","마이너스","다시"));
 		map.put("*", Arrays.asList("곱하기","애스태리커"));
-		map.put("/", Arrays.asList("나누기","슬래시","작대기"));
+		map.put("/", Arrays.asList("나누기","분의")); //"슬래시","작대기" 
 	}
 
 	
