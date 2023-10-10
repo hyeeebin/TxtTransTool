@@ -1,5 +1,6 @@
 package test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -23,10 +24,8 @@ public class SymbolTrans {
 	public static String specialSymbolTrans(String text) {
 		String[] transLation = map.get(text);
 		
-		for (int i = 0; i < transLation.length; i++) {
-			System.out.println(transLation[i]);
-		}
-		return transLation.toString();
+		//숫자 및 문자 그리고 일부 특수문자(,.그리고 띄어쓰기)를 제외한 모든 특수문자 변경
+		return Arrays.toString(transLation).replaceAll("[^ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9,. ]", ""); 
 	}
 
 	public static void main(String args[]) {
@@ -37,7 +36,10 @@ public class SymbolTrans {
 		String scanResult = scanner.nextLine();
 
 		specialSymbolTrans(scanResult);
-
+		
+		//결과값이 더하기,플러스 형태로 출력
+		System.out.println(specialSymbolTrans(scanResult));
+		
 		scanner.close();
 	}
 }
